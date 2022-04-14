@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Conversion</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+       
+        function getBinary(){
+            
+            document.getElementById('ans').style.opacity = "1";
+            
+
+            var a = parseInt(document.getElementById('vals').value);
+            var binary = a.toString(2);
+            document.getElementById('text').innerHTML = "The binary conversion of " + a + " is";
+            document.getElementById('ans').innerHTML = binary;
+     
+        }
+    </script>
+</head>
+<body>
+    
+    <section id="main">
+
+        <div class="container">
+
+            <h1>Binary Converter</h1>
+
+            <input type="number" name="vals" id="vals" placeholder="Enter a number" onchange="getBinary()">
+            
+            <span id="text"> </span>
+            <span id="ans" style="opacity: 0;"></span>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
